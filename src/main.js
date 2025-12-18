@@ -417,7 +417,7 @@ document.querySelector('#app').innerHTML = `
     </div>
     
     <div class="model-selection-section">
-      <h3>학습한 AI 모델</h3>
+      <h3>수업 시간에 배운 AI 모델 중 하나를 선택하세요</h3>
       <p class="model-intro">수업 시간에 학습한 모델 중에서 정의한 문제에 가장 적합한 모델을 선택하세요.</p>
       
       <form id="model-form" onsubmit="submitModelSelection(event)">
