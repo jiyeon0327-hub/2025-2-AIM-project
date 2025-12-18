@@ -12,22 +12,54 @@ const ADMIN_UID = import.meta.env.VITE_ADMIN_UID
 
 // 페이지 초기 HTML 구조
 document.querySelector('#app').innerHTML = `
-  <h1>AIM</h1>
-  <p class="subtitle">Analyze problem, Identify task, Model selection</p>
-  <p>고등학교 2학년 '인공지능과 미래사회' 교과의 프로젝트 수업에서 사용할 웹 사이트입니다.</p>
-  <p>프로젝트 주제 선정을 위한 단계별 가이드를 제공합니다.</p>
+  <div class="home-header">
+    <h1>🎯 AIM</h1>
+    <p class="subtitle">Analyze problem, Identify task, Model selection</p>
+    <p> 문제를 분석하고 정의한 뒤, 적합한 모델을 선정해보자.</p>
+  </div>
   
-  <div id="auth-container" style="text-align: center; margin: 20px 0;">
-    <button id="google-login" style="display: none;">🔐 Google 로그인</button>
-    <div id="user-info" style="display: none;">
-      <p>환영합니다, <span id="user-name"></span>님!</p>
-      <button id="logout-btn">로그아웃</button>
+  <div class="info-cards">
+    <div class="info-card">
+      <div class="card-icon">🎓</div>
+      <h3>대상</h3>
+      <p>고등학교 2학년<br>'인공지능과 미래사회' 교과</p>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">📋</div>
+      <h3>목적</h3>
+      <p>AI 프로젝트 주제 선정을 위한<br>단계별 가이드 제공</p>
+    </div>
+    <div class="info-card">
+      <div class="card-icon">🚀</div>
+      <h3>과정</h3>
+      <p>문제 탐색 → 정의 → 검증 →<br>모델 선택</p>
     </div>
   </div>
   
-  <div id="navigation-buttons" style="display: none; margin-top: 20px; text-align: center;">
-    <button id="student-btn">학생으로 시작하기</button>
-    <button id="teacher-btn" style="display: none;">교사 모니터링</button>
+  <div id="auth-container">
+    <button id="google-login" class="login-btn" style="display: none;">
+      <span class="btn-icon">🔐</span>
+      <span>Google 로그인</span>
+    </button>
+    <div id="user-info" style="display: none;">
+      <div class="welcome-box">
+        <span class="welcome-icon">👋</span>
+        <p>환영합니다, <span id="user-name"></span>님!</p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="navigation-buttons" style="display: none;">
+    <button id="student-btn" class="main-action-btn">
+      <span class="btn-icon">🎯</span>
+      <span class="btn-text">인공지능 프로젝트 주제 탐색하기</span>
+      <span class="btn-subtitle">문제 발견부터 모델 선택까지</span>
+    </button>
+    <button id="teacher-btn" class="secondary-btn" style="display: none;">
+      <span class="btn-icon">📊</span>
+      <span>교사 모니터링</span>
+    </button>
+    <button id="logout-btn" class="logout-btn">로그아웃</button>
   </div>
 `
 
